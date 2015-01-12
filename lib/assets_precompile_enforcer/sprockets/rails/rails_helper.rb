@@ -1,8 +1,8 @@
-require 'sprockets/helpers/rails_helper'
+require 'sprockets/rails/helper'
 
 module Sprockets
-  module Helpers
-    module RailsHelper
+  module Rails
+    module Helper
       def javascript_include_tag_with_enforced_precompile(*sources)
         sources_without_options(sources).each do |source|
           ensure_asset_will_be_precompiled!(source, 'js') if enforce_precompile?
